@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trovit</title>
+    
+    <!-- Include Flowbite CSS -->
+    <link href="css/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Your page content goes here -->
+	<main class="container mx-auto my-4">
+		<div id="drawer-top-example" class="fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-top-label">
+			<h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+			<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+			</svg>Info</h5>
+			<button type="button" data-drawer-hide="drawer-top-example" aria-controls="drawer-top-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+				<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+				</svg>
+				<span class="sr-only">Close menu</span>
+			</button>
+			<p class="max-w-lg mb-6 text-justify text-sm text-gray-500 dark:text-gray-400">Le RIB (Relevé d'identité bancaire) est un numéro qui identifie d'une manière unique un compte bancaire en Tunisie. Le relevé d'identité bancaire tunisien est constitué d'une série de 20 chiffres. Le RIB se compose de quatre éléments distincts. Les deux premiers chiffres représentent le code de la banque, offrant ainsi une indication immédiate de l'institution financière associée au compte. Les trois chiffres suivants représentent le code de l'agence bancaire, facilitant la localisation précise de l'agence où le compte a été ouvert. Les treize chiffres suivants constituent le numéro de compte, identifiant de manière unique le compte au sein de l'agence spécifiée. Enfin, les deux derniers chiffres servent de clé de contrôle, jouant un rôle essentiel dans la vérification de la validité du RIB.</p>
+			<button type="button" data-drawer-hide="drawer-top-example" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Fermer
+				<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+				</svg>
+			</button>
+		</div>
+		<div class="flex p-2 items-center justify-center">
+			<img class="rounded-full pt-4 w-48 h-24" src="img/logo.svg" alt="Trovit">
+		</div>
+
+		<div class="flex p-2 items-center justify-center h-48">
+			
+			<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+				
+				<div class="space-y-6 mb-4">
+					<h5 class="text-xl text-center font-medium text-gray-900 dark:text-white">Vérificateur de RIB Tunisien</h5>
+				</div>
+				
+				<form class="flex items-center" id="form">   
+					<div class="relative w-full">
+						<input type="number" name="rib" pattern="[0-9]{20}" title="Le RIB (Relevé de l'identité bancaire) tunisien est constitué d'une série de 20 chiffres" id="floating_outlined" class="block px-2.5 pb-2.5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+						<label for="floating_outlined" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Votre RIB</label>
+					</div>
+					<button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+						<svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+						</svg>
+						<span class="sr-only">Search</span>
+					</button>
+				</form>
+			</div>
+			
+			
+			
+		</div>
+		<div class="flex p-2 items-center justify-center h-12">
+			<button onclick="startQRScanner()" class="text-white bg-blue-500 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Scan QR Code</button>
+		</div>
+		<div class="flex p-2 items-center justify-center">
+			<div id="loader" role="status" class="hidden w-full mx-4 mx-auto max-w-md p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700 mx-4">
+				<div class="flex items-center justify-between">
+					<div>
+						<div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+						<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+					</div>
+					<div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+				</div>
+				<div class="flex items-center justify-between pt-4">
+					<div>
+						<div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+						<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+					</div>
+					<div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+				</div>
+				<div class="flex items-center justify-between pt-4">
+					<div>
+						<div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+						<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+					</div>
+					<div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+				</div>
+				<span class="sr-only">Loading...</span>
+			</div>
+			
+			<div class="hidden" id="result">
+				<ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+					<li class="flex items-center space-x-3 rtl:space-x-reverse">
+						<svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+						 </svg>
+						<span>IBAN : <span class="font-semibold text-gray-900 dark:text-white" id="iban"></span></span>
+					</li>
+					<li class="flex items-center space-x-3 rtl:space-x-reverse">
+						<svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+						 </svg>
+						<span>BIC/SWIFT : <span class="font-semibold text-gray-900 dark:text-white" id="bic"></span></span>
+					</li>
+					<li class="flex items-center space-x-3 rtl:space-x-reverse">
+						<svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+						 </svg>
+						<span>BANK : <span class="font-semibold text-gray-900 dark:text-white" id="bank"></span></span>
+					</li>
+				</ul>
+				<div class="flex items-center justify-center h-24">
+					<button onclick="share()" type="button" class="text-white bg-blue-500 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">
+					
+						<svg class="w-3.5 h-3.5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+							<path d="M14.419 10.581a3.564 3.564 0 0 0-2.574 1.1l-4.756-2.49a3.54 3.54 0 0 0 .072-.71 3.55 3.55 0 0 0-.043-.428L11.67 6.1a3.56 3.56 0 1 0-.831-2.265c.006.143.02.286.043.428L6.33 6.218a3.573 3.573 0 1 0-.175 4.743l4.756 2.491a3.58 3.58 0 1 0 3.508-2.871Z"/>
+						</svg>
+						Partager
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="fixed z-100 w-72 h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
+			<div class="grid h-full max-w-lg grid-cols-3 mx-auto">
+				<a href="https://github.com/McZen-Technologies/TNRIB" target="_blank" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+					<svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+					</svg>
+					<span class="sr-only">Home</span>
+				</a>
+				<div id="tooltip-home" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+					Github
+					<div class="tooltip-arrow" data-popper-arrow></div>
+				</div>
+				<div class="flex items-center justify-center">
+					<button onclick="resetForm()" data-tooltip-target="tooltip-new" type="button" class="inline-flex items-center justify-center w-10 h-10 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+						<svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97"/>
+						</svg>
+						<span class="sr-only">Reset</span>
+					</button>
+				</div>
+				<div id="tooltip-new" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+					Reset
+					<div class="tooltip-arrow" data-popper-arrow></div>
+				</div>
+				<button data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+					<svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+					</svg>
+					<span class="sr-only">Info</span>
+				</button>
+			</div>
+		</div>
+	</main>
+	<div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+		<div class="relative p-4 w-full max-w-md max-h-full">
+			<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+				<button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+					<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+					</svg>
+					<span class="sr-only">Close modal</span>
+				</button>
+				<div class="p-4 md:p-5 text-center">
+
+					<svg class="mx-auto mb-4 text-red-600 w-12 h-12  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z"/>
+					</svg>
+					<h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Le Relevé d'Identité Bancaire (RIB) que vous avez fourni est invalide.</h3>
+
+					<button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Fermer</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Include Flowbite JavaScript -->
+    <script src="js/flowbite.min.js"></script>
+	<script src="js/tnrib.js"></script>
+	<script>
+		const $targetEl = document.getElementById('popup-modal');
+		const options = {
+			placement: 'bottom-right',
+			backdrop: 'dynamic',
+			backdropClasses:
+				'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
+			closable: true,
+			onHide: () => {
+				console.log('modal is hidden');
+			},
+			onShow: () => {
+				console.log('modal is shown');
+			},
+			onToggle: () => {
+				console.log('modal has been toggled');
+			},
+		};
+		
+		// instance options object
+		const instanceOptions = {
+		  id: 'popup-modal',
+		  override: true
+		};
+		const modal = new Modal($targetEl, options, instanceOptions);
+		
+		function startQRScanner() {
+			// Call the Android interface method to start QR code scanning
+			window.Android.startQRScanner();
+		}
+
+		function handleQRCodeResult(qrCodeData) {
+			// Handle the QR code result received from Android	
+			console.log('Data ' + qrCodeData)
+			document.getElementById('floating_outlined').value = qrCodeData
+			// You can continue processing the data as needed
+		}
+		function initializeAndroidInterface() {
+			window.Android.registerQRCodeListener(function(qrCodeData) {
+				console.log("QR code data received from Android:", qrCodeData);
+				handleQRCodeResult(qrCodeData);
+			});
+		}
+		function share() {
+			// Call the Java method
+			let iban = document.querySelector("#iban").innerHTML
+			let bic = document.querySelector("#bic").innerHTML
+			let combinedContent = `IBAN: ${iban}, BIC: ${bic}`;
+			window.Android.shareContent(combinedContent);
+		}
+		function resetForm() {
+			form.reset();
+			document.querySelector("#result").classList.add("hidden");
+			document.querySelector("#loader").classList.add("hidden");
+		}
+		function checkRIB(event) {
+			event.preventDefault();
+			document.querySelector("#result").classList.add("hidden");
+			document.querySelector("#loader").classList.add("hidden");
+			formData = new FormData(this);
+			let rib = formData.get('rib')
+			if(new TNRIB(rib).isValid()){
+				let result = new TNRIB(rib)
+				let iban = result.iban
+				let bic  = result.bic
+				let bank = result.bankName
+				document.querySelector("#loader").classList.remove("hidden");
+				setTimeout(function() {
+					document.querySelector("#iban").innerHTML = iban
+					document.querySelector("#bic").innerHTML = bic
+					document.querySelector("#bank").innerHTML = bank
+					document.querySelector("#result").classList.remove("hidden");
+					document.querySelector("#loader").classList.add("hidden");
+				}, 1500);
+				
+			}else{
+				console.log('Invalid')
+				modal.show();
+			}
+		}
+		const form = document.getElementById('form');
+		form.addEventListener('submit', checkRIB);
+		
+		window.onload = function() {
+			initializeAndroidInterface();
+		};
+	</script>
+</body>
+
+</html>
